@@ -1,0 +1,16 @@
+
+<!-- <p>{{ noticia.completeInfo }}</p>>-->
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{ noticia.title }}</ion-card-title>
+    <ion-card-subtitle>Noticia</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>{{ noticia.description }}</p>
+    <img [src]="'assets/' + noticia.imageUrl" alt="{{ noticia.title }}">
+  </ion-card-content>
+</ion-card>
+
+

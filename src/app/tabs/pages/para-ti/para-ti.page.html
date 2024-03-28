@@ -10,4 +10,9 @@
       <ion-title size="large">para-ti</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div *ngFor="let noticia of noticias" >
+    <app-noticia [noticia]="noticia"></app-noticia>
+
+  </div>
+  
 </ion-content>

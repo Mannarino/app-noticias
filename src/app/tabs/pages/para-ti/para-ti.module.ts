@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ParaTiPageRoutingModule } from './para-ti-routing.module';
 
 import { ParaTiPage } from './para-ti.page';
+import { NoticiaComponent } from 'src/app/components/noticia/noticia.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ParaTiPage } from './para-ti.page';
     IonicModule,
     ParaTiPageRoutingModule
   ],
-  declarations: [ParaTiPage]
+  declarations: [ParaTiPage,NoticiaComponent]
 })
 export class ParaTiPageModule {}
