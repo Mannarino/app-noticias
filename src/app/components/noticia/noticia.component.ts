@@ -8,6 +8,7 @@ import { Noticia } from 'src/app/core/interfaces/noticia';
 })
 export class NoticiaComponent  implements OnInit {
   @Input() noticia!:Noticia;
+  @Input() loaded!:boolean;
   constructor() { }
 
   ngOnInit() {}

@@ -1,20 +1,18 @@
 
-<!-- <p>{{ noticia.completeInfo }}</p>>-->
-
-<ion-card>
+<!-- noticia-->
+<ion-card  *ngIf="loaded">
   <ion-card-header>
     <ion-card-title>{{ noticia.title }}</ion-card-title>
     <ion-card-subtitle>Noticia</ion-card-subtitle>
   </ion-card-header>
-
   <ion-card-content>
     <p>{{ noticia.description }}</p>
     <img [src]="'assets/' + noticia.imageUrl" alt="{{ noticia.title }}">
   </ion-card-content>
 </ion-card>
 
-
-<ion-card>
+<!-- skeleton -->
+<ion-card  *ngIf="!loaded">
   <ion-card-header>
     <ion-card-title>
       <ion-skeleton-text [animated]="true" style="width: 80%"></ion-skeleton-text>
@@ -23,7 +21,6 @@
       <ion-skeleton-text [animated]="true" style="width: 20%"></ion-skeleton-text>
     </ion-card-subtitle>
   </ion-card-header>
-
   <ion-card-content>
     <p><ion-skeleton-text [animated]="true" style="width: 100%"></ion-skeleton-text></p>
     <p><ion-skeleton-text [animated]="true" style="width: 80%"></ion-skeleton-text></p>
@@ -32,7 +29,6 @@
     <p><ion-skeleton-text [animated]="true" style="width: 95%"></ion-skeleton-text></p>
     <ion-thumbnail  style="width: 100%;; height: 110px;margin-top: 10px;">
       <ion-skeleton-text style="width: 100%;" [animated]="true"></ion-skeleton-text>
-      <!-- Texto esquelético para la miniatura -->
     </ion-thumbnail>
   </ion-card-content>
 </ion-card>
