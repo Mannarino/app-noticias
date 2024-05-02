@@ -10,7 +10,7 @@
     <img [src]="'assets/' + noticia.imagen" alt="{{ noticia.title }}">
     
     <div class="contenedor">
-     <ion-button fill="clear" > <a href="{{noticia.url}}">ver</a> </ion-button> 
+     <ion-button fill="clear" (click)="ver(noticia.url)"> ver</ion-button> 
      <ion-button fill="clear" id="{{ noticia.title }}" >
       <ion-icon name="ellipsis-vertical"></ion-icon>
      </ion-button>

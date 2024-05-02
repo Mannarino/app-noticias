@@ -55,7 +55,7 @@ export const noticias = [
     },
     {
         "title": "La Tierra",
-        "url": "https://noticias-88.netlify.app/noticia/7",
+        "url": "https://es.wikipedia.org/wiki/Tierra",
         "categoria": "espacio",
         "imagen": "la-tierra.jpg",
         "description": "La Tierra es el tercer planeta del Sistema Solar, considerado como único planeta habitado por seres vivos. Es el hogar de millones de especies, incluyendo a los seres humanos."
