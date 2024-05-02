@@ -19,13 +19,15 @@ const routes: Routes = [{
     {
       path: 'titulares',
       loadChildren: () => import('./tabs/pages/titulares/titulares.module').then((m) => m.TitularesPageModule),
+    
     },
     {
       path: 'favoritos',
       loadChildren: () => import('./tabs/pages/favoritos/favoritos.module').then((m) => m.FavoritosPageModule),
     }
   ],
-},]  
+},] 
+  
 ;
 
 @NgModule({

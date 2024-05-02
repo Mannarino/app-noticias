@@ -7,7 +7,28 @@
   </ion-card-header>
   <ion-card-content>
     <p>{{ noticia.description }}</p>
-    <img [src]="'assets/' + noticia.imageUrl" alt="{{ noticia.title }}">
+    <img [src]="'assets/' + noticia.imagen" alt="{{ noticia.title }}">
+    
+    <div class="contenedor">
+     <ion-button fill="clear" > <a href="{{noticia.url}}">ver</a> </ion-button> 
+     <ion-button fill="clear" id="{{ noticia.title }}" >
+      <ion-icon name="ellipsis-vertical"></ion-icon>
+     </ion-button>
+     <ion-popover trigger="{{ noticia.title }}" [dismissOnSelect]="true">
+      <ng-template>
+        <ion-content>
+          <ion-list>
+            <ion-item [button]="true" (click)="guardarFavoritos()" [detail]="false">guardar en favoritos</ion-item>
+            <ion-item [button]="true" (click)="compartir()" [detail]="false">compartir</ion-item>
+            <ion-item [button]="true" (click)="ver(noticia.url)">ver</ion-item>
+    
+            
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+    </div>
+    
   </ion-card-content>
 </ion-card>
 

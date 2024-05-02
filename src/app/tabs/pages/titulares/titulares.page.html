@@ -10,4 +10,27 @@
       <ion-title size="large">titulares</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-segment [scrollable]="true" value="espacio" (ionChange)="segmentChange($event)">
+    <ion-segment-button value="espacio">
+      espacio
+    </ion-segment-button>
+    <ion-segment-button value="deportes">
+      deportes
+    </ion-segment-button>
+    <ion-segment-button value="historia">
+      historia
+    </ion-segment-button>
+    <ion-segment-button value="ciencia">
+      ciencia
+    </ion-segment-button>
+    <ion-segment-button value="religion">
+      religion
+    </ion-segment-button>
+    
+    
+  </ion-segment>
+  <div *ngFor="let noticia of list" >
+    <app-noticia [loaded]="loaded" [noticia]="noticia"></app-noticia>
+
+  </div>
 </ion-content>

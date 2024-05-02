@@ -15,4 +15,5 @@ export class ParaTiPage implements OnInit {
   }
    noticias: Noticia[] = noticias
   
+   
 }

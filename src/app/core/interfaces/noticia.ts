@@ -1,6 +1,7 @@
 export interface Noticia {
     title: string;
-    imageUrl: string;
+    imagen: string;
     description: string;
-    completeInfo: string;
+    url: string;
+    categoria:string
 }
