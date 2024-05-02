@@ -29,8 +29,13 @@
     
     
   </ion-segment>
-  <div *ngFor="let noticia of list" >
-    <app-noticia [loaded]="loaded" [noticia]="noticia"></app-noticia>
-
-  </div>
+ 
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" sizeSm="6"  sizeMd="4" *ngFor="let noticia of list" >
+        <app-noticia [loaded]="loaded" [noticia]="noticia"></app-noticia>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
 </ion-content>
