@@ -24,9 +24,14 @@ const routes: Routes = [{
     {
       path: 'favoritos',
       loadChildren: () => import('./tabs/pages/favoritos/favoritos.module').then((m) => m.FavoritosPageModule),
-    }
+    }, 
+    {
+    path: 'infinite-scroll',
+    loadChildren: () => import('./tabs/pages/infinite-scroll/infinite-scroll.module').then( m => m.InfiniteScrollPageModule)
+  },
   ],
 },] 
+ 
   
 ;
 
