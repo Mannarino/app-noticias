@@ -18,8 +18,10 @@
       <ng-template>
         <ion-content>
           <ion-list>
-            <ion-item [button]="true" (click)="guardarFavoritos()" [detail]="false">guardar en favoritos</ion-item>
-            <ion-item [button]="true" (click)="compartir()" [detail]="false">compartir</ion-item>
+            <ion-item [button]="true" (click)="guardarFavoritos(noticia.title)" [detail]="false">guardar en favoritos
+              <ion-icon slot="end" name="heart-outline"></ion-icon><ion-icon slot="end" name="heart"></ion-icon>
+            </ion-item>
+            <ion-item [button]="true" (click)="compartir(noticia.url)" [detail]="false">compartir</ion-item>
             <ion-item [button]="true" (click)="ver(noticia.url)">ver</ion-item>
     
             
@@ -54,7 +56,13 @@
   </ion-card-content>
 </ion-card>
 
+<ion-toast
+[isOpen]="isToastOpen"
+[message]="message"
 
+[duration]="5000"
+(didDismiss)="setOpen(false)"
+></ion-toast>
 
   
 

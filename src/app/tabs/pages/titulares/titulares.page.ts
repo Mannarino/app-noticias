@@ -7,12 +7,12 @@ import { noticias, titulares } from 'src/app/data/data';
 })
 export class TitularesPage implements OnInit {
   titulares=titulares
-  loaded = false
+  
   list = titulares
   constructor() { }
 
   ngOnInit() {
-    setTimeout(()=>{this.loaded=true},5000)
+    
     this.builtList('espacio')
   }
   segmentChange(SegmentChangeEventDetail:any){

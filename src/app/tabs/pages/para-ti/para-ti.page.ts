@@ -7,11 +7,11 @@ import { noticias } from 'src/app/data/data';
   styleUrls: ['./para-ti.page.scss'],
 })
 export class ParaTiPage implements OnInit {
-  loaded = false
+  
   constructor() { }
 
   ngOnInit() {
-    setTimeout(()=>{this.loaded=true},5000)
+    
   }
    noticias: Noticia[] = noticias
   
